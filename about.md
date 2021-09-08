@@ -26,9 +26,12 @@ titles:
 key: page-about
 ---
 
-"고수가 되고 싶은 주니어 개발자"
-{:.lead}
+## "고수가 되고 싶은 주니어 개발자"
 
-![Screenshot](docs/assets/images/blog/gin.jpg){:.lead srcset="/assets/img/blog/gin.jpg, /assets/img/blog/hydejack-8@0,5x.png 960w, /assets/img/blog/hydejack-8@0,25x.png 480w" data-width="1920" data-height="1080"}
-다양한 분야에 대해서 공부하고 있습니다.
-{:.figure}
+![Screenshot](docs/assets/images/blog/gin.jpg)
+
+- 2020.01 NAVER Travel & Finance 팀 합류
+  - 이벤트혜택 페이지 FE 작업
+  - 국내패키지 프로젝트 세팅 및 FE 작업
+  - 호텔 FE 작업
+  - 반복, 단순작업 최소화를 위한 여러 관리툴 작업
