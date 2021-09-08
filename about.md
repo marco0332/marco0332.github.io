@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-## "고수가 되고 싶은 주니어 개발자"
+## 고수가 되고 싶은 주니어 개발자
 
 ![Screenshot](docs/assets/images/blog/gin.jpg)
 
