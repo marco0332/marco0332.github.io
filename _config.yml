@@ -6,7 +6,7 @@ url     : https://marco0332.github.io # the base hostname & protocol for your si
 baseurl : # does not include hostname
 title   : Dive into the world
 description: > # this means to ignore newlines until "Language & timezone"
-  실력있는 프론트엔드 개발자가 되고 싶은 주니어
+  개발자 이기인의 블로그
 
 
 ## => Language and Timezone
@@ -102,22 +102,21 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: disqus # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: lee_gi_in # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : 3cb2fd7b77f3f4b08056 # GitHub Application Client ID
+    clientID    :  # GitHub Application Client ID
     clientSecret:  # GitHub Application Client Secret
-    repository  : marco0332.github.io # GitHub repo
-    owner       : marco0332 # GitHub repo owner
+    repository  :  # GitHub repo
+    owner       :  # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
-      - marco0332
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -154,11 +153,11 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : UA-116255001-3 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
