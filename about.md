@@ -26,9 +26,9 @@ titles:
 key: page-about
 ---
 
-## 고수가 되고 싶은 주니어 개발자
+고수가 되고 싶은 주니어 개발자
 
-![Screenshot](docs/assets/images/blog/gin.jpg)
+![Screenshot](https://user-images.githubusercontent.com/27988544/132677929-5b94c01a-064e-4437-aec0-be13ab75c771.jpg)
 
 - 2020.01 NAVER Travel & Finance 팀 합류
   - 이벤트혜택 페이지 FE 작업
