@@ -1,18 +1,23 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       FE
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      ko      : &KO       프론트엔드
+      ko-KR   : *KO
+      # @end locale config
+    url: /front-end.html?tag=FE
+
+  - titles:
+      # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
       fr      : &FR       Archives
@@ -31,13 +36,6 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
       fr      : &FR       À propos

@@ -48,6 +48,7 @@ repository_tree: master
 paths:
   root    : # title link url, "/" (default)
   home    : # home layout url, "/" (default)
+  front-end    : /front-end.html # FE
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
@@ -182,7 +183,6 @@ exclude:
   - /docs
   - /node_modules
   - /screenshots
-  - /test
   - /vendor
 
 defaults:

@@ -1,0 +1,32 @@
+---
+layout: page
+titles:
+  # @start locale config
+  en      : &EN       FE
+  en-GB   : *EN
+  en-US   : *EN
+  en-CA   : *EN
+  en-AU   : *EN
+  ko      : &KO       프론트엔드
+  ko-KR   : *KO
+  fr      : &FR       FE
+  fr-BE   : *FR
+  fr-CA   : *FR
+  fr-CH   : *FR
+  fr-FR   : *FR
+  fr-LU   : *FR
+  # @end locale config
+---
+
+<div class="layout--archive js-all">
+  {%- include tags.html prefix_tag='FE' -%}
+  <div class="js-result layout--archive__result d-none">
+    {%- include article-list.html articles=site.posts type='item' show_cover=false show_excerpt=true show_info=true reverse=true group_by='year' -%}
+  </div>
+</div>
+
+<script>
+  {%- include scripts/archieve.js -%}
+</script>
+
+{{ content }}
