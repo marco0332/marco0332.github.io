@@ -9,7 +9,7 @@ header:
       ko      : &KO       프론트엔드
       ko-KR   : *KO
       # @end locale config
-    url: /front-end.html?tag=FE
+    url: /front-end.html?category=FE
 
   - titles:
       # @start locale config

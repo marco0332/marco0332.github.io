@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: articles
 titles:
   # @start locale config
   en      : &EN       FE
@@ -16,10 +16,13 @@ titles:
   fr-FR   : *FR
   fr-LU   : *FR
   # @end locale config
+articles:
+  data_source: paginator.posts
+  type: grid
 ---
 
 <div class="layout--archive js-all">
-  {%- include tags.html prefix_tag='FE' -%}
+  {%- include tags.html category='FE' -%}
   <div class="js-result layout--archive__result d-none">
     {%- include article-list.html articles=site.posts type='item' show_cover=false show_excerpt=true show_info=true reverse=true group_by='year' -%}
   </div>

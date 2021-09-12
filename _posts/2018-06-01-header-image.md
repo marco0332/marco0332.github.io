@@ -1,6 +1,9 @@
 ---
 title: Post with Header Image
-tags: TeXt
+tags: 
+  - FE
+  - React
+  - HAHA
 article_header:
   type: cover
   image:

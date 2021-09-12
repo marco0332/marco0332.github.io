@@ -1,3 +1,5 @@
+{%- assign _category = include.category | default: '' -%}
+
 {%- assign _tag_max_size = 1 -%}
 {%- assign _tag_min_size = 1 -%}
 {%- assign _tag_cur_size = 1 -%}
@@ -18,7 +20,7 @@
 <div class="site-tags js-tags">
   <ul class="menu">
     <li>
-      <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
+      <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="" data-category="{{ _category }}">
         Show All<div class="tag-button__count">{{ site.posts | size }}</div>
       </button>
     </li>
@@ -43,8 +45,9 @@
       {%- else -%}
         {%- assign _c_index = 4 -%}
       {%- endif -%}
-      <li><button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ _tag[0] | strip | url_encode }}">
-          <span>{{ _tag[0] | strip }}</span><div class="tag-button__count">{{ _tag[1].size }}</div>
+      <li>
+        <button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ _tag[0] | strip | url_encode }}" data-category="{{ _category }}">
+          <span></span>{{ _tag[0] | strip }}</span><div class="tag-button__count">{{ _tag[1].size }}</div>
         </button>
       </li>
     {%- endfor -%}
