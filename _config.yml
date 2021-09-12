@@ -49,6 +49,7 @@ paths:
   root    : # title link url, "/" (default)
   home    : # home layout url, "/" (default)
   front-end    : /front-end.html # FE
+  life    : /life.html #LIFE
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 

@@ -13,6 +13,18 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       LIFE
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      ko      : &KO       삶
+      ko-KR   : *KO
+      # @end locale config
+    url: /life.html?category=LIFE
+
+  - titles:
+      # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
       en-US   : *EN
