@@ -22,8 +22,8 @@ titles:
 
 ![Screenshot](https://user-images.githubusercontent.com/27988544/132677929-5b94c01a-064e-4437-aec0-be13ab75c771.jpg)
 
-- 2020.01 NAVER Travel & Finance 팀 합류
-  - 이벤트혜택 페이지 FE 작업
-  - 국내패키지 프로젝트 세팅 및 FE 작업
-  - 호텔 FE 작업
-  - 반복, 단순작업 최소화를 위한 여러 관리툴 작업
+### 2020.01 NAVER Travel & Finance Dev 팀 합류
+- 이벤트혜택 페이지 FE 작업
+- 국내패키지 프로젝트 세팅 및 FE 작업
+- 호텔 FE 작업
+- 반복, 단순작업 최소화를 위한 여러 관리툴 작업

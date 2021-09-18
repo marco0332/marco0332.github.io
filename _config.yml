@@ -194,8 +194,6 @@ defaults:
       layout: article
       sharing: false
       license: false
-      aside:
-        toc: false
       show_edit_on_github: false
       show_subscribe: false
       pageview: true
