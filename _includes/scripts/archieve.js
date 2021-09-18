@@ -60,6 +60,10 @@
     }
 
     function initTags(category) {
+      $categoryArticles = $categoryArticles.filter((_, article) => {
+        return $(article).data('tags').split(',').includes(category);
+      });
+
       $articleTags = $rawTags.filter((_, tagButton) => {
         var flag = $(tagButton).data('encode') !== category;
         if(!flag){
@@ -156,7 +160,6 @@
           }
         }
 
-        console.log(result);
         for (i = 0; i < sectionArticles.length; i++) {
           result[i] && $sections.eq(i).removeClass('d-none');
           result[i] || $sections.eq(i).addClass('d-none');

@@ -1,3 +1,5 @@
+{%- assign _category = include.category | default: '' -%}
+
 {%- assign _excerpt_truncate = include.excerpt_truncate | default: 350 -%}
 
 {%- assign _excerpt_type = include.excerpt_type -%}
@@ -45,49 +47,52 @@
           {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
         {%- endif -%}
       {%- endfor -%}
+      {%- assign _splited_tags = _tags | split: ',' -%}
 
-      {%- if include.article_type == 'BlogPosting' -%}
-        <article class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-      {%- else -%}
-        <article class="item" data-tags="{{ _tags }}">
-      {%- endif -%}
-        {%- if _article.cover and include.show_cover-%}
-          {%- include snippets/get-nav-url.html path=_article.cover -%}
-          {%- assign _article_cover = __return -%}
-          <div class="item__image">
-          {%- if include.cover_size == 'lg' -%}
-            <img class="image image--lg" src="{{ _article_cover }}" />
-          {%- elsif include.cover_size == 'sm' -%}
-            <img class="image image--sm" src="{{ _article_cover }}" />
-          {%- else -%}
-            <img class="image" src="{{ _article_cover }}" />
-          {%- endif -%}
-          </div>
+      {%- if _splited_tags contains _category -%}
+        {%- if include.article_type == 'BlogPosting' -%}
+          <article class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
+        {%- else -%}
+          <article class="item" data-tags="{{ _tags }}">
         {%- endif -%}
-        <div class="item__content">
-          <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
-          <div class="item__description">
-            {%- if _article.excerpt and include.show_excerpt -%}
-              <div class="article__content" itemprop="description articleBody">
-                {%- if _excerpt_type == 'html' -%}
-                  {{ _article.excerpt }}
-                {%- else -%}
-                  {{ _article.excerpt | strip_html | strip | truncate: _excerpt_truncate }}
-                {%- endif -%}
-              </div>
+          {%- if _article.cover and include.show_cover-%}
+            {%- include snippets/get-nav-url.html path=_article.cover -%}
+            {%- assign _article_cover = __return -%}
+            <div class="item__image">
+            {%- if include.cover_size == 'lg' -%}
+              <img class="image image--lg" src="{{ _article_cover }}" />
+            {%- elsif include.cover_size == 'sm' -%}
+              <img class="image image--sm" src="{{ _article_cover }}" />
+            {%- else -%}
+              <img class="image" src="{{ _article_cover }}" />
             {%- endif -%}
-            {%- if include.show_readmore -%}
-              <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
+            </div>
+          {%- endif -%}
+          <div class="item__content">
+            <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
+            <div class="item__description">
+              {%- if _article.excerpt and include.show_excerpt -%}
+                <div class="article__content" itemprop="description articleBody">
+                  {%- if _excerpt_type == 'html' -%}
+                    {{ _article.excerpt }}
+                  {%- else -%}
+                    {{ _article.excerpt | strip_html | strip | truncate: _excerpt_truncate }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              {%- if include.show_readmore -%}
+                <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
+              {%- endif -%}
+            </div>
+            {%- if include.show_info -%}
+              {%- include snippets/assign.html target=site.data.variables.default.page.pageview
+                source0=_article.pageview -%}
+              {%- assign _show_pageview = __return -%}
+              {%- include article-info.html article=_article show_pageview=_show_pageview -%}
             {%- endif -%}
           </div>
-          {%- if include.show_info -%}
-            {%- include snippets/assign.html target=site.data.variables.default.page.pageview
-              source0=_article.pageview -%}
-            {%- assign _show_pageview = __return -%}
-            {%- include article-info.html article=_article show_pageview=_show_pageview -%}
-          {%- endif -%}
-        </div>
-      </article>
+        </article>
+      {%- endif -%}
 
 
     {%- elsif include.type == 'brief' -%}
