@@ -47,9 +47,14 @@
           {%- assign _tags = _tags | append: _tag_encode | append: ',' -%}
         {%- endif -%}
       {%- endfor -%}
-      {%- assign _splited_tags = _tags | split: ',' -%}
 
-      {%- if _splited_tags contains _category -%}
+      {%- assign _splited_tags = _tags | split: ',' -%}
+      {%- assign _show_flag = false -%}
+      {%- if _category == '' or _category == nil -%}
+        {%- assign _show_flag = true -%}
+      {%- endif -%}
+
+      {%- if _show_flag or _splited_tags contains _category -%}
         {%- if include.article_type == 'BlogPosting' -%}
           <article class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
         {%- else -%}

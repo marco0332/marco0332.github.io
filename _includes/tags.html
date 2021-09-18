@@ -47,7 +47,7 @@
       {%- endif -%}
       <li>
         <button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ _tag[0] | strip | url_encode }}" data-category="{{ _category }}">
-          <span></span>{{ _tag[0] | strip }}</span><div class="tag-button__count">{{ _tag[1].size }}</div>
+          <span>{{ _tag[0] | strip }}</span><div class="tag-button__count">{{ _tag[1].size }}</div>
         </button>
       </li>
     {%- endfor -%}

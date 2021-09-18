@@ -1,10 +1,14 @@
 .layout--home {
   .pagination {
     margin: map-get($spacers, 4) 0;
+    text-align: center;
   }
   .pagination__menu {
     max-width: 100%;
     @include overflow(auto);
+  }
+  .pagination__menu .menu {
+    justify-content: center;
   }
   .pagination__omit {
     color: $text-color-l;
