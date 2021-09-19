@@ -28,10 +28,28 @@
     @include link-colors($text-color-theme-dark, $main-color-1);
   }
 }
+@mixin text-hidden {
+  color: $text-color-theme-hidden;
+  h1, h2, h3 {
+    color: $text-color-theme-hidden;
+  }
+  h4, h5 {
+    color: $text-color-theme-hidden;
+  }
+  h6 {
+    color: $text-color-theme-hidden;
+  }
+  a:not(.button) {
+    @include link-colors($text-color-theme-hidden, $text-color-theme-hidden);
+  }
+}
 
 .text--light {
   @include text-light();
 }
 .text--dark {
   @include text-dark();
+}
+.text--hidden {
+  @include text-hidden();
 }
