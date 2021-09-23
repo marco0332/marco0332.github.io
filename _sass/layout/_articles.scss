@@ -4,8 +4,17 @@
   @include media-breakpoint-down(md) {
     margin-top: map-get($spacers, 4);
   }
-  .card__header {
-    font-size: map-get($base, font-size);
+  @media (max-width: 499px) {
+    .card__header {
+      font-size: map-get($base, font-size-h4-sm);
+      height: map-get($layout, header-height-sm);
+    }
+  }
+  @media (min-width: 500px) {
+    .card__header {
+      font-size: map-get($base, font-size-lg);
+      height: map-get($layout, header-height);
+    }
   }
   .card__image {
     & > .overlay {
