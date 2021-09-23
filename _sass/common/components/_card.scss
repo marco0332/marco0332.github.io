@@ -20,8 +20,16 @@
   }
 }
 
-.card__content {
-  padding: map-get($spacers, 2) map-get($spacers, 3);
+@media (max-width: 1024px) {
+  .card__content {
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) {
+  .card__content {
+    display: none;
+  }
 }
 
 .card__header {

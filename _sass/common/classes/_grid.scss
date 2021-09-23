@@ -16,6 +16,9 @@ $grid-columns: 12;
     width: auto;
   } @else if $columns == "stretch" {
     @include flex(1);
+  } @else if $columns == "none" {
+    @include flex(none);
+    width: 0;
   } @else {
     @include flex(none);
     width: percentage($columns / $grid-columns);
