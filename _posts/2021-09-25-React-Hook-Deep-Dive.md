@@ -7,6 +7,7 @@ tags:
   - React
   - Hook
   - TODO👀
+cover: /assets/images/fe/react-hook-deep-dive/cover.jpg
 
 ---
 
@@ -120,7 +121,7 @@ function resolveDispatcher() {
 
 _(TO-DO Study)_ 아직 reconciler와 Fiber에 대한 정확한 개념을 모르기 때문에, useState 동작과 관련된 부분만 살펴보았고 다음 4가지 상황에 따라 구현되어 있음을 파악했다.
 
-1. **OnlyDispatcher**: throwInvalidHookError
+1. **OnlyDispatcher**: [throwInvalidHookError](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.new.js#L312-L322)
 
    - version mismatching
    - breaking the Rules of Hooks
@@ -253,6 +254,7 @@ _(TO-DO Study)_ 아직 reconciler와 Fiber에 대한 정확한 개념을 모르�
    ```
 
    _(TO-DO Study)_ [updateReducer](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.new.js#L741-L894) 의 구현 분석.
+
    
 
 4. **OnRerender**: rerenderState
