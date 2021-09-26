@@ -7,7 +7,7 @@ tags:
   - React
   - Hook
   - TODO👀
-cover: /assets/images/fe/react-hook-deep-dive/cover.jpg
+cover: /assets/images/blog/fe/react-hook-deep-dive/cover.jpg
 
 ---
 
@@ -267,7 +267,7 @@ _(TO-DO Study)_ 아직 reconciler와 Fiber에 대한 정확한 개념을 모르�
    }
    ```
 
-   _(TO-DO Study) [rerenderReducer](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.new.js#L896-L948) 의 구현 분석.
+   _(TO-DO Study) [rerenderReducer](https://github.com/facebook/react/blob/main/packages/react-reconciler/src/ReactFiberHooks.new.js#L896-L948) 의 구현 조금 더 자세하게 분석.
 
    rerendering의 과정에서의 useState 함수는 rerenderState로 정의된다. 이 함수는 updateState함수와 마찬가지로 로직을 별도의 함수인 **rerenderReducer** 로 실행하도록 구조를 설계했다. 따라서 rerenderState 함수가 어떻게 동작하는지 파악하기 위해 rerenderReducer 함수를 파헤쳐보자.
 
@@ -317,6 +317,8 @@ _(TO-DO Study)_ 아직 reconciler와 Fiber에 대한 정확한 개념을 모르�
      return [newState, dispatch];
    }
    ```
+
+   코드를 보면 rerendering 상황에서 상태값의 변화와 관련된 로직은 `lastRenderPhaseUpdate !== null` 이 `true` 일 경우에 동작한다. lastRenderPhaseUpdate 값은 queue로 부터 가져오는데, `Update` 동작이 완료되면 항상 queue.pending 값은 null 로 할당된다. 따라서 render Update 동작이 돌아가는 와중에 rerendering이 발생했을 경우에만 상태값 갱신 로직이 돌아간다. 그렇지 않을 경우 `memoizedState` 값이 반환된다.
 
    
 
