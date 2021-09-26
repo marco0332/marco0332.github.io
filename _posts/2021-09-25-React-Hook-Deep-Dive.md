@@ -121,7 +121,7 @@ function resolveDispatcher() {
 
 ### 2-1. 기본 Hook
 
-- useState
+- #### useState
 
   React에서 state는 **화면 상에서 변할 수 있는 값, 다른 요소의 노출 방식에 영향을 주는 값**을 의미하며, setState로 갱신될 경우 연관된 컴포넌트는 re-rendering 작업이 발생한다.
 
@@ -152,7 +152,7 @@ function resolveDispatcher() {
 
   
 
-- useEffect
+- #### useEffect
 
   React 컴포넌트 안에서 데이터를 가져오거나 구독, DOM 조작등의 작업을 총칭하여 'side effects (줄여서 effect)' 라고 한다. 왜냐하면 이러한 작업들은 다른 컴포넌트에 영향을 줄 수도 있고, 렌더링 과정에서는 구현할 수 없는 작업이기 때문이다.
 
@@ -186,7 +186,7 @@ function resolveDispatcher() {
 
     
 
-- useContext
+- #### useContext
 
   useContext는 context를 읽고, context의 변경을 구독하기 위한 Hook이다. React의 Context API에서의 `<MyContext.Consumer>`의 역할과 같다.
 
@@ -251,13 +251,19 @@ function resolveDispatcher() {
 
 ### 2-2 추가 Hooks
 
-- useReducer
-- useCallback
-- useMemo
-- useRef
-- useImperativeHandle
-- useLayoutEffect
-- useDebugValue
+- #### useReducer
+
+- #### useCallback
+
+- #### useMemo
+
+- #### useRef
+
+- #### useImperativeHandle
+
+- #### useLayoutEffect
+
+- #### useDebugValue
 
 
 
