@@ -13,6 +13,18 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       CS
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      ko      : &KO       컴퓨터공학
+      ko-KR   : *KO
+      # @end locale config
+    url: /compter-science.html?category=CS
+
+  - titles:
+      # @start locale config
       en      : &EN       LIFE
       en-GB   : *EN
       en-US   : *EN
